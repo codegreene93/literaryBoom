@@ -13,3 +13,228 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* require_tree .
+*= require cart
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+* {
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.5;
+}
+
+/*Nav Bar */
+.NavBar a {
+  display: inline;
+  margin: 5px;
+  padding:  0 85px 0 85px;
+  text-decoration: none;
+  color: #4A5155;
+}
+
+.NavBar a:hover {
+  background-color: #00D382;
+  color: #fff;
+}
+
+
+/*Index Page */
+.index-left, .index-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+
+}
+
+.over {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  }
+
+
+  .over h1{
+    text-align: center;
+    color: #00D382;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+    margin: 60px 60px 20px 60px;
+    padding: 50px 0 50px 0;
+    font-size: 60px;
+  }
+
+  .over h5 {
+  text-align: center;
+    font-size: 25px;
+
+  }
+
+  .index-right img{
+    width: 250px;
+    height: 400px;
+    display: block;
+    margin: auto;
+  }
+
+  .index-right p{
+    text-align: right;
+    margin: 10px 15px 0 0;
+
+  }
+
+.call-to-action {
+  text-align: center;
+}
+
+  .call-to-action h4 {
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+  }
+  .call-to-action a {
+
+    text-decoration: none;
+    color: #00D382;
+    border: 1px solid #00D382;
+    border-radius: 10px;
+    padding: 10px;
+
+  }
+
+.call-to-action a:hover{
+  background-color: #00D382;
+  color: #fff;
+}
+
+
+
+/*Media Queries for Index page*/
+
+
+/*log in page*/
+/*background image*/
+.sparkler {
+  background-image: url("sparkler.jpg");
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100vw;
+  background-size: cover;
+  position: relative;
+}
+
+/*center the sign in*/
+ .box {
+   width: 100px;
+    height: 100px;
+    padding: 60px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -70px 0 0 -100px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: grey;
+    opacity: 0.9;
+  }
+
+/*create user*/
+.rain {
+  background-image: url("Rain.jpg");
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100vw;
+  background-size: cover;
+  position: relative;
+}
+
+.createuser {
+  width: 100px;
+   height: 100px;
+   padding-bottom: 100px;
+   padding-left: 40px;
+   padding-right: 40px;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   margin: -70px 0 0 -100px;
+   border: 1px solid grey;
+   border-radius: 10px;
+   background-color: grey;
+   opacity: 0.9;
+}
+
+/*PublisherProfile*/
+
+.heading h2 {
+  margin: 10px 0px 10px 0;
+  color: #00D382;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.HorNav, .AuthorsBio, .Books {
+  display: flex;
+  flex-direction: column;
+}
+
+.contain {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33%;
+}
+
+
+
+.HorNav a {
+  text-decoration: none;
+  margin: 20px 0;
+  padding: 30px 5px;
+  color: #00D382;
+}
+
+.HorNav a:hover {
+    border-bottom: 1px solid #00D382;
+}
+
+.AuthorsBio h2{
+  text-align: center;
+}
+
+.AuthorsBio img {
+  padding-top: 50px;
+}
+
+.PublishLeft img{
+  float: left;
+  width: 50%;
+}
+
+.PublishRight img {
+  float: right;
+  width: 50%;
+}
+
+.Books::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*footer*/
+
+footer{
+  display: flex;
+
+  background-color: #2C3840;
+  color: #4A5155;
+  padding: 20px;
+}
