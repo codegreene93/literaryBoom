@@ -1,18 +1,16 @@
+<p id="notice"><%= notice %></p>
 <h1>CART</h1>
 
 <a href="/items" class="button">Continue Shopping</a>
 
 <a href="/cart/clear" class="button">Clear Cart</a>
 
-<a href="/cart/remove/<%= items_url %>" class="button">Remove From Cart</a>
-
-<a href="/cart/decrease/<%= items_url %>" class="button">Decrease</a>
+<a href="/checkout" class="button">Checkout</a>
 
 <% if @cart.empty? %>
 <h1> Your cart is empty</h1>
 <%end%>
 
-<p id="notice"><%= notice %></p>
 <div id="itemsContainer">
 <table id="customers"> <% total = 0 %>
 <% @cart.each do |id, quantity| %>
@@ -22,13 +20,16 @@
 </td>
 <td class="title"><%= link_to item.title, item %></td>
 
-<td><a href="#">Remove From Cart</a></td> 
-<td><a href="cart/increase/<%= item.id %>" >Increase Items<i class='fas fa-arrow-alt-circle-down'></i></a></td> </td>
-<td><a href="cart/reduce/<%= item.id %>" >Reduce Items<i class='fas fa-arrow-alt-circle-down'></i></a></td> </td>
-<td class="price"><%= number_to_currency(item.price, :unit =>"€") %></td> <td class="quantity"><%= quantity %></td> <td class="price"><%= number_to_currency(quantity * item.price, :unit =>"€") %></td>
+<td><a href="cart/remove/<%= item.id %>" >Remove From Cart<i class='fas fa-arrow-alt-circle-down'></i></a></td> 
+<td><a href="cart/increase/<%= item.id %>" >Increase Items<i class='fas fa-arrow-alt-circle-down'></i></a></td>
+<td><a href="cart/reduce/<%= item.id %>" >Reduce Items<i class='fas fa-arrow-alt-circle-down'></i></a></td>
+<td class="price"><%= number_to_currency(item.price, :unit =>"€") %></td> 
+<td class="quantity"><%= quantity %></td> <td class="price"><%= number_to_currency(quantity * item.price, :unit =>"€") %></td>
 </tr>
 <% total += quantity * item.price %>
-<% end %> <tr>
-Grand Total: <%= number_to_currency(total, :unit => "€") %> </tr>
+<% end %> 
+<tr>
+Grand Total: <%= number_to_currency(total, :unit => "€") %> 
+</tr>
 </table>
 </div>

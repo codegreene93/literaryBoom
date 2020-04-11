@@ -1,21 +1,22 @@
 <div id="itemsContainer">
-<h1>Thank You<br>
-You have just placed an order <%=@orderReg.id %></h1>
+<h1>Thank You
+<br>
+You have just placed an order</h1>
 </div>
 
 <table id="customers">
 <tr>
-<% @orders.limit(1).order(id: :desc).each do |order| %> <!--This is the equivalent to an 
-SQL statement like this: SELECT TOP 1 orderNumber from orders ORDER BY id DESC. 
-What this does is choose the last order entered into the table by ordering them in 
-descending order and choosing only one-->
+    <%= @orders.id %>
+
 <td>Order reference for the order you just placed <%= order.id %></td>
 <% end %>
 </tr>
 </table>
+
 <table id="customers">
 <% @total = 0 %>
 <% @orderitems.each do |id,quantity| %>
+
 <tr>
 <% item = Orderitem.find_by_id(id) %>
 <td><%= item.title %></td>
@@ -23,10 +24,14 @@ descending order and choosing only one-->
 <td><%=number_to_currency(item.price, :unit => "€")%></td>
 <td><%= number_to_currency(item.quantity * item.price, :unit => "€") %></td>
 </tr>
+
+<tr>
 <% timx = (item.quantity * item.price)%> <!--timx is a variable name which you can call whatever you like-->
 <% @total += timx %>
 </tr>
+
 <% end %>
+
 <tr>
 <td>Order Total: &euro; <%= @total %></td>
 </tr>

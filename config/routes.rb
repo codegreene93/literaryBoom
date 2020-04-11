@@ -28,8 +28,9 @@ Rails.application.routes.draw do
  get '/cart/clear', to: 'cart#clear'
  get '/cart', to: 'cart#index'
  get '/cart/:id', to: 'cart#add'
- get '/cart/remove/:id' => 'cart#remove'
- get '/cart/decrease/:id' => 'cart#decrease'
+ get '/cart/remove/:id', to: 'cart#remove'
+ get '/cart/decrease/:id', to: 'cart#decrease'
+ get '/cart/increase/:id', to: 'cart#increase'
  
   root 'static_pages#home'
 

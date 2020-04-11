@@ -47,12 +47,6 @@ else
 @cart = {}
 end
 
-def clear
-#sets session variable to nil and bring back to index
-session[:cart] = nil
-redirect_to :action => :index
-end
-
 def remove
 id = params[:id]
 cart = session[:cart]
@@ -73,11 +67,14 @@ redirect_to :action => :index
 end
 
 def createOrder
+    
 # Step 1: Get the current user
 @user = User.find(current_user.id)
+
 # Step 2: Create a new order and associate it with the current user
 @order = @user.orders.build(:order_date => DateTime.now, :status => 'Pending')
 @order.save
+
 # Step 3: For each item in the cart, create a new item on the order!!
 @cart = session[:cart] || {} # Get the content of the Cart
 @cart.each do | id, quantity |
@@ -85,11 +82,12 @@ item = Item.find_by_id(id)
 @orderitem = @order.orderitems.build(:item_id => item.id, :title => item.title, :description => item.description, :quantity => quantity, :price=> item.price)
 @orderitem.save
 end
-@orders = Order.all
-end
+
 @orders = Order.last
+
 @orderitems = Orderitem.where(order_id: Order.last)
 session[:cart] = nil
 end
 
+end
 end
