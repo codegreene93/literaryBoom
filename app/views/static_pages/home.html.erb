@@ -12,11 +12,13 @@
 <body>
   <header>
     <div class="NavBar">
-      <a href= '#'> "Placeholder Search"</a>
-      <a href= '#'> Home </a>
-      <a href= '#'> Browse</a>
-      <a><%= link_to "View Cart", "/cart" %></a>
-      <a href= '#'> Log In </a>
+      <a><%= link_to "Home", "/home" %></a>
+      <a><%= link_to "About", "/about" %></a>
+      <a><%= link_to "Help", "/help" %></a>
+      <a><%= link_to "Browse", "/items" %></a>
+      <a><%= link_to "Cart", "/cart" %></a>
+      <a><%= link_to "Login", "/login" %></a>
+      <a><%= link_to "Register", "/register" %></a>
       </div>
     </header>
 
@@ -30,8 +32,11 @@
 
         <div class = "call-to-action">
           <h4>Want to sell your books online without drastically reducing your profit margin? Join Literary BOOM! today.</h4>
-          <a href="#Button">Join as an author</a>
-          <a href="#Button">Join as a fan</a>
+    
+          <a href="/register"><button>Join as an Author</button></a>
+          <a href="/register"><button>Join as a Fan</button></a>
+          <a href="/login"><button>Login</button></a>
+          
         </div>
       </div>
 

@@ -238,3 +238,24 @@ footer{
   color: #4A5155;
   padding: 20px;
 }
+
+/*from tutorial 2*/
+
+.headSec {
+background: url("/assets/Site/library.jpg");
+background-repeat: no-repeat;
+background-size:100% 100%;
+min-height:10px;
+background-color: #b3e0ff;
+width: 100%;
+margin-bottom:10px;
+overflow: auto;
+}
+And the container
+.container {
+background: url("/assets/Site/Book5.png");
+background-repeat:no-repeat;
+background-position:right bottom;
+width: 100%;
+min-height: 700px;
+}

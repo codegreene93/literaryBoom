@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :items
   get 'cart/index'
 
  get '/home' => 'static_pages#home'

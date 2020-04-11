@@ -53,7 +53,6 @@ session[:cart] = nil
 redirect_to :action => :index
 end
 
-Delete Item method
 def remove
 id = params[:id]
 cart = session[:cart]
