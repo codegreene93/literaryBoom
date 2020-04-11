@@ -17,8 +17,8 @@
       <a><%= link_to "Help", "/help" %></a>
       <a><%= link_to "Browse", "/items" %></a>
       <a><%= link_to "Cart", "/cart" %></a>
-      <a><%= link_to "Login", "/login" %></a>
-      <a><%= link_to "Register", "/register" %></a>
+      <a><%= link_to "Login", new_user_registration_path %></a>
+      <a><%= link_to "Register", new_user_registration_path %></a>
       </div>
     </header>
 
@@ -33,9 +33,8 @@
         <div class = "call-to-action">
           <h4>Want to sell your books online without drastically reducing your profit margin? Join Literary BOOM! today.</h4>
     
-          <a href="/register"><button>Join as an Author</button></a>
-          <a href="/register"><button>Join as a Fan</button></a>
-          <a href="/login"><button>Login</button></a>
+          <a <%= link_to "Join as an Author", new_user_registration_path %></a>
+          <a <%= link_to "Join as a Fan", new_user_registration_path %></a>
           
         </div>
       </div>
