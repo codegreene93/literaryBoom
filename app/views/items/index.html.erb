@@ -14,9 +14,10 @@ Author: <%= item.author %>
 <br>
 Genre: <%= item.genre %></p>
 <p>
-<%= link_to 'Show', item, :class => "button", :role => "button" %>
-<%= link_to 'Edit', edit_item_path(item), :class => "button", :role => "button" %>
-<%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+    <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
+    <%= link_to 'Show', item, :class => "button", :role => "button" %>
+    <%= link_to 'Edit', edit_item_path(item), :class => "button", :role => "button" %>
+    <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
 </p>
 </div>
 <% end %>

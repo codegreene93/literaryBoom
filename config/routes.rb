@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
   
+  get 'orderitems/index'
+
+  get 'orderitems/show'
+
+  get 'orderitems/new'
+
+  get 'orderitems/edit'
+  
+  get '/checkout' => 'cart#createOrder'
+
+  resources :orders do
+  resources:orderitems
+  end
+  
   resources :items
   get 'cart/index'
 
@@ -20,7 +34,10 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :posts
-  devise_for :users, controllers: {registrations: "registrations"}
+  #devise_for :users, controllers: {registrations: "registrations"}
+  devise_for :users do 
+   resources :orders 
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end

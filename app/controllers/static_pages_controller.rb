@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
   def profile
   end
   
+  def createOrder
+  @orders = Order.all
+  end
+  
 end
