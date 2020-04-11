@@ -1,13 +1,12 @@
 <h1>CART</h1>
-<p>Find me in app/views/cart/index.html.erb</p>
 
 <a href="/items" class="button">Continue Shopping</a>
 
 <a href="/cart/clear" class="button">Clear Cart</a>
 
-<a href="/cart/remove/<%= item.id %>">Remove From Cart</a>
+<a href="/cart/remove/<%= items_url %>" class="button">Remove From Cart</a>
 
-<a href="/cart/decrease/<%= item.id %>">Decrease</a>
+<a href="/cart/decrease/<%= items_url %>" class="button">Decrease</a>
 
 <% if @cart.empty? %>
 <h1> Your cart is empty</h1>
