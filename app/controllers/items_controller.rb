@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  
+  def search
+  st = "%#{params[:q]}%"
+  @items = Item.where("title like ?", st)
+  end
 
   # GET /items
   # GET /items.json

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div id="itemsContainer">
+<h1>Items</h1>
+<% @items.each do |item| %>
+<div class="itemhols">
+<h1><%= item.title %></h1>
+<%= link_to (image_tag item.image_url, :class=>"itemholsIm"), item %>
+<p><%= item.description %>
+</p>
+<p><%= item.price %>
+<br>
+<%= item.category %>
+<br>
+<%= item.brand %>
+</p>
+<p>
+<a href="/cart/<%= item.id %>" class="button">Add to Cart</a>
+<%= link_to 'Show', item, :class =>"button", :role=>"button" %>
+<% if session[:login] == 1 %>
+<%= link_to 'Edit', edit_item_path(item), :class =>"button", :role=>"button" %>
+<%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button", :role=>"button" %>
+<% end %>
+</p>
+</div>
+<% end %>
+<br>
+
+<% if @items.length == 0 %>
+<br />
+<h2>There are currently no products in this category</h2>
+<% end %>
