@@ -1,21 +1,20 @@
 <div id="itemsContainer">
-<h1>Thank You
-<br>
-You have just placed an order</h1>
+<h1>Thank You<br>
+You have just placed an order <%=@orders.id %></h1>
 </div>
 
 <table id="customers">
 <tr>
     <%= @orders.id %>
 
-<td>Order reference for the order you just placed <%= order.id %></td>
-<% end %>
+<td>Order reference for the order you just placed <%= @orders.id %></td>
+
 </tr>
 </table>
 
 <table id="customers">
 <% @total = 0 %>
-<% @orderitems.each do |id,quantity| %>
+<% @orderitems.each do |id, quantity| %>
 
 <tr>
 <% item = Orderitem.find_by_id(id) %>
@@ -35,4 +34,17 @@ You have just placed an order</h1>
 <tr>
 <td>Order Total: &euro; <%= @total %></td>
 </tr>
+
+<td>
+    Order Total: &euro; <%= @total %>
+</td>
+<% shipping = 30 %>
+<% @overall = shipping + @total%>
+
+<tr>
+<td>Shipping &euro;30</td>
+<td>You Pay &euro; <%= @overall %></td>
+</tr>
+
 </table>
+

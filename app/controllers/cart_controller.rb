@@ -51,7 +51,7 @@ def remove
 id = params[:id]
 cart = session[:cart]
 cart.delete id
-redirect_to :root
+redirect_to cart_path
 end
 
 def decrease
