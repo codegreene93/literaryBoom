@@ -28,22 +28,22 @@
       <h1> Literary Boom </h1>
       <h5>Sell your books Online</h5>
 
-
-
         <div class = "call-to-action">
           <h4>Want to sell your books online without drastically reducing your profit margin? Join Literary BOOM! today.</h4>
     
           <a <%= link_to "Join as an Author", new_user_registration_path %></a>
           <a <%= link_to "Join as a Fan", new_user_registration_path %></a>
-            
+        </div>
+        
+      </div>
+        <div class= "index-right">
+          <p>Phone: 0872315423</p>
           
+          <h2>Popular Books</h2>
+        <div>
+          <%=render 'layouts/popular'%>
         </div>
       </div>
-
-      <div class= "index-right">
-        <p>Phone: 0872315423</p>
-        <img src="Book.jpg" alt="Floating book">
-        </div>
 </div>
 
 
