@@ -114,6 +114,27 @@
   color: #fff;
 }
 
+.about p{
+  text-align: left;
+    margin: 10px 15px 0 0;
+}
+
+.about h3{
+  text-align: center;
+  color: #00D382;
+  padding-top: 20px;
+}
+
+.help h5{
+  text-align: center;
+  color: #00D382;
+  padding-top: 20px;
+}
+
+.help p{
+  text-align: left;
+    margin: 10px 15px 0 0;
+}
 
 
 /*Media Queries for Index page*/
