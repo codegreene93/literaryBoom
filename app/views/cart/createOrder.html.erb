@@ -1,6 +1,6 @@
 <div id="itemsContainer">
 <h1>Thank You<br>
-You have just placed an order <%=@orders.id %></h1>
+You have just placed an order</h1>
 </div>
 
 <table id="customers">
@@ -48,3 +48,8 @@ You have just placed an order <%=@orders.id %></h1>
 
 </table>
 
+<%= link_to "View Orders", orders_path %>
+
+<tr>
+<td><h2> <a href="/paid/<%= @order.id %>" class="button">Pay Now</a></h2></td>
+</tr>

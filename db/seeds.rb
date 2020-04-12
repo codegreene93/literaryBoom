@@ -4,4 +4,12 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first) 
+# 
+# rails db seed
+# 
+# rails db rollback
+# 
+# rails db migrate down
+# 
+# heroku deploy with PostrGres with alias

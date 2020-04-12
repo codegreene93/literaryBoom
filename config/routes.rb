@@ -32,6 +32,8 @@ Rails.application.routes.draw do
  get '/cart/decrease/:id', to: 'cart#decrease'
  get '/cart/increase/:id', to: 'cart#increase'
  
+ get '/paid/:id' => 'static_pages#paid'
+ 
   root 'static_pages#home'
 
   resources :posts
