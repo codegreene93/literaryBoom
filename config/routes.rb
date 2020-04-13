@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   
+  get 'admin/admin'
+
   get '/createuser' => 'sign_in#createuser'
   
   get '/signIn' => 'sign_in#signin'
