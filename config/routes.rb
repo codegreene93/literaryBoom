@@ -1,21 +1,19 @@
 Rails.application.routes.draw do
   
-  get 'orderitems/index'
+ get 'orderitems/index'
+ get 'orderitems/show'
+ get 'orderitems/new'
+ get 'orderitems/edit'
+ 
+ get '/checkout' => 'cart#createOrder'
 
-  get 'orderitems/show'
-
-  get 'orderitems/new'
-
-  get 'orderitems/edit'
-  
-  get '/checkout' => 'cart#createOrder'
-
-  resources :orders do
-  resources:orderitems
-  end
-  
-  resources :items
-  get 'cart/index'
+ resources :orders do
+ resources:orderitems
+ end
+ 
+ resources :items
+ 
+ get 'cart/index'
 
  get '/home' => 'static_pages#home'
  get '/about' => 'static_pages#about'
@@ -32,7 +30,11 @@ Rails.application.routes.draw do
  get '/cart/decrease/:id', to: 'cart#decrease'
  get '/cart/increase/:id', to: 'cart#increase'
  
- get '/paid/:id' => 'static_pages#paid'
+ get '/paid/:id' => 'static_pages#thankyou'
+ get '/payments' => 'orders#pay'
+ get '/shipped/:id' => 'orders#shipped'
+ 
+ get '/thankyou/:id' => 'static_pages#thankyou'
  
  get 'category/:title', to: 'static_pages#category'
  
@@ -43,6 +45,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :posts
+  
   #devise_for :users, controllers: {registrations: "registrations"}
   devise_for :users do 
    resources :orders 
