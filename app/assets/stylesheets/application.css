@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,6 +14,9 @@
  *= require_tree .
  *= require_self
  */
+=======
+
+>>>>>>> htmlupdates
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 * {
@@ -114,7 +118,11 @@
 /*log in page*/
 /*background image*/
 .sparkler {
+<<<<<<< HEAD
   background-image: url("sparkler.jpg");
+=======
+  background-image: url("Sparkler.jpg");
+>>>>>>> htmlupdates
   background-repeat: no-repeat;
   height: 90vh;
   width: 100vw;
@@ -125,12 +133,23 @@
 /*center the sign in*/
  .box {
    width: 100px;
+<<<<<<< HEAD
     height: 100px;
     padding: 60px;
     position: absolute;
     top: 40%;
     left: 50%;
     margin: -70px 0 0 -100px;
+=======
+    height: 200px;
+    padding: 60px;
+    padding-bottom: 135px;
+    position: absolute;
+    margin-bottom: 10px;
+    top: 40%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+>>>>>>> htmlupdates
     border: 1px solid grey;
     border-radius: 10px;
     background-color: grey;
@@ -149,8 +168,13 @@
 
 .createuser {
   width: 100px;
+<<<<<<< HEAD
    height: 100px;
    padding-bottom: 100px;
+=======
+   height: 150px;
+   padding-bottom: 135px;
+>>>>>>> htmlupdates
    padding-left: 40px;
    padding-right: 40px;
    position: absolute;
@@ -229,6 +253,7 @@ footer{
   background-color: #2C3840;
   color: #4A5155;
   padding: 20px;
+<<<<<<< HEAD
 }
 
 /*from tutorial 2*/
@@ -250,4 +275,6 @@ background-repeat:no-repeat;
 background-position:right bottom;
 width: 100%;
 min-height: 700px;
+=======
+>>>>>>> htmlupdates
 }
