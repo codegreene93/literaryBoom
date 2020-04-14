@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+ 
   
  get 'orderitems/index'
  get 'orderitems/show'
@@ -51,7 +51,7 @@ Rails.application.routes.draw do
   devise_for :users do 
    resources :orders 
   end
-=======
+
 
   
   get 'admin/admin'
@@ -73,8 +73,8 @@ Rails.application.routes.draw do
  
 
   resources :post
-  devise_for :users, controllers: {registrations: "registrations"}
->>>>>>> htmlupdates
+  devise_for controllers: {registrations: "registrations"}
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end
