@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -135,7 +136,7 @@
 /*log in page*/
 /*background image*/
 .sparkler {
-  background-image: url("sparkler.jpg");
+  background-image: url("Sparkler.jpg");
   background-repeat: no-repeat;
   height: 90vh;
   width: 100vw;
@@ -146,12 +147,15 @@
 /*center the sign in*/
  .box {
    width: 100px;
-    height: 100px;
+    height: 200px;
     padding: 60px;
+    padding-bottom: 135px;
+    padding-right: 100px;
     position: absolute;
+    margin-bottom: 10px;
     top: 40%;
     left: 50%;
-    margin: -70px 0 0 -100px;
+    margin: -100px 0 0 -100px;
     border: 1px solid grey;
     border-radius: 10px;
     background-color: grey;
@@ -170,10 +174,10 @@
 
 .createuser {
   width: 100px;
-   height: 100px;
-   padding-bottom: 100px;
+   height: 150px;
+   padding-bottom: 135px;
    padding-left: 40px;
-   padding-right: 40px;
+   padding-right: 80px;
    position: absolute;
    top: 40%;
    left: 50%;
@@ -264,7 +268,7 @@ width: 100%;
 margin-bottom:10px;
 overflow: auto;
 }
-And the container
+/*And the container*/
 .container {
 background: url("/assets/Site/Book5.png");
 background-repeat:no-repeat;

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+ 
+ root 'static_pages#home'
   
  get 'orderitems/index'
  get 'orderitems/show'
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
  get '/checkout' => 'cart#createOrder'
 
  resources :orders do
- resources:orderitems
+  resources:orderitems
  end
  
  resources :items
@@ -36,13 +38,12 @@ Rails.application.routes.draw do
  
  get '/thankyou/:id' => 'static_pages#thankyou'
  
- get 'category/:title', to: 'static_pages#category'
- 
  post '/search' => 'items#search'
  
  resources :categories
+ get 'category/:title', to: 'static_pages#category'
  
-  root 'static_pages#home'
+
 
   resources :posts
   
@@ -50,6 +51,30 @@ Rails.application.routes.draw do
   devise_for :users do 
    resources :orders 
   end
+
+
+  
+  get 'admin/admin'
+
+  get '/createuser' => 'sign_in#createuser'
+  
+  get '/signIn' => 'sign_in#signin'
+  
+  get '/adminsignin' => 'sign_in#adminsignin'
+
+  #get 'sign_in/AdminSignIn'
+  
+  #get 'sign_in/SignIn'
+  
+  #get 'sign_in/CreateUser'
+
+  root 'home#index'
+  
+ 
+
+  resources :post
+  devise_for controllers: {registrations: "registrations"}
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end

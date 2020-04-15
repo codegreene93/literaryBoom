@@ -1,26 +1,65 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Literary BOOM!</title>
+  <link rel="Stylesheet" href="Stylesheet.css">
+  <script src="https://kit.fontawesome.com/ff52836ed1.js" crossorigin="anonymous"></script>
+</head>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<body>
+  <header>
+    <div class="NavBar">
+      <a href= '#'> "Placeholder Search"</a>
+      <a href= '#'> Home </a>
+      <a href= '#'> Browse</a>
+      <a href= '#'> Basket </a>
+      <a href= '#'> Log In </a>
+      </div>
+    </header>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+<div class="rain">
+  <div class = "createuser">
+  <h2>Log in</h2>
 
-  <% if devise_mapping.rememberable? %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+    <% end %>
+
+  <%= render "devise/shared/links" %>
   </div>
-<% end %>
+</div>
+  <footer>
+    <i class="far fa-address-card"></i>
+    <p>Address: NCI, Mayor Street, International Financial Services Centre, Dublin </p>
+    <i class="fas fa-phone"></i>
+    <p> Phone Number: 0872315423 </p>
+    <i class="fas fa-envelope"></i>
+    <p>Email: Info@literaryboom.ie</p>
+  </footer>
 
-<%= render "devise/shared/links" %>
+
+</body>
+
+</html>

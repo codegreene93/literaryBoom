@@ -13,3 +13,5 @@
 # rails db migrate down
 # 
 # heroku deploy with PostrGres with alias
+
+
