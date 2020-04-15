@@ -25,9 +25,9 @@
 
 /*Nav Bar */
 .NavBar a {
-  display: inline;
-  margin: 5px;
-  padding:  0 85px 0 85px;
+ /* display: inline;*/
+ margin: 5px;
+  padding:  14px 16px;
   text-decoration: none;
   color: #4A5155;
 }

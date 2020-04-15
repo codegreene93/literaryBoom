@@ -19,7 +19,11 @@
       <a><%= link_to "Cart", "/cart" %></a>
       <a><%= link_to "Login", new_user_registration_path %></a>
       <a><%= link_to "Register", new_user_registration_path %></a>
-      </div>
+    <% if user_signed_in? %>
+        <a><%= link_to 'Edit Profile', edit_user_registration_path %></a>
+        <a><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></a>
+    <% end %>
+    </div>
     </header>
 
   <div class ="over">
