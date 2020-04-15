@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20200413170338) do
-<<<<<<< HEAD
 
   create_table "categories", force: :cascade do |t|
     t.string   "title"
@@ -52,8 +51,6 @@ ActiveRecord::Schema.define(version: 20200413170338) do
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
-=======
->>>>>>> htmlupdates
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
