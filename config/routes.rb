@@ -72,7 +72,7 @@ Rails.application.routes.draw do
   
  
 
-  resources :post
+  resources :home
   devise_for controllers: {registrations: "registrations"}
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
