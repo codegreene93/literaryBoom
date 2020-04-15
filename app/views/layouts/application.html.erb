@@ -9,8 +9,10 @@
   </head>
 
   <body>
-    
-    <%=render 'layouts/search'%>
+    <%= render 'layouts/header'%>  
+    <%= render 'layouts/search'%>
+    <%#= render 'layouts/cart'%>
+    <%#= render 'layouts/categories'%>
     
       <% if user_signed_in? %>
       

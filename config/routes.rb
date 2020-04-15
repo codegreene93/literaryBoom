@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+ root 'static_pages#home'
   
  get 'orderitems/index'
  get 'orderitems/show'
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
  get '/checkout' => 'cart#createOrder'
 
  resources :orders do
- resources:orderitems
+  resources:orderitems
  end
  
  resources :items
@@ -37,13 +38,12 @@ Rails.application.routes.draw do
  
  get '/thankyou/:id' => 'static_pages#thankyou'
  
- get 'category/:title', to: 'static_pages#category'
- 
  post '/search' => 'items#search'
  
  resources :categories
+ get 'category/:title', to: 'static_pages#category'
  
-  root 'static_pages#home'
+
 
   resources :posts
   
