@@ -2,6 +2,8 @@
 <!--Lets go to layouts/static_pages/home.html.erb and put in the code:
 WHERE??-->
 
+ 
+
 <h1>Categories</h1>
 <br>
 <% @categories.each do |category| %>
@@ -10,6 +12,8 @@ WHERE??-->
     </div>
 <% end %>
 
+ 
+
 <% @categories.each do |category| %>
     <div class="itemhols">
     <p><%= category.title %></p>
@@ -17,6 +21,8 @@ WHERE??-->
     <p><%= category.description %></p>
     </div>
 <% end %>category_url
+
+ 
 
 <p><a href="/category/<%#= category.title %>" class="button"><%#= category.title %></a></p>
 <p><a href="/category/<%#= category.title %>" class="button"><%#= category.title %></a></p>
