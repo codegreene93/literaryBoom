@@ -45,7 +45,7 @@ Rails.application.routes.draw do
  
 
 
-  resources :posts
+  resources :home
   
   #devise_for :users, controllers: {registrations: "registrations"}
   devise_for :users do 
