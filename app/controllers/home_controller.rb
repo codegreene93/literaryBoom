@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   
-  def index
+  def home
     
     if user_signed_in?
       redirect_to posts_path
