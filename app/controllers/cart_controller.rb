@@ -1,4 +1,11 @@
 class CartController < ApplicationController
+
+
+
+
+
+
+
 def add
 # get the Id of the product
 id = params[:id]
