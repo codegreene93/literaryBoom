@@ -5,15 +5,15 @@
       <a><%= link_to "Help", "/help" %></a>
       <a><%= link_to "Browse", "/items" %></a>
       <a><%= link_to "Cart", "/cart" %></a>
-      <a><%= link_to "Login", new_user_registration_path %></a>
-      <a><%= link_to "Register", new_user_registration_path %></a>
-    </div>
-  </header>
+      <a><%= link_to "Sign up", new_user_registration_path %></a>
 
     <% if user_signed_in? %>
-        <li><%= link_to 'Edit Profile',  edit_user_registration_path %></li>
-        <li><%= link_to 'Sign out',  destroy_user_session_path, :methd => :delete %></li>
+        <a><%= link_to 'Edit Profile',  edit_user_registration_path %></a>
+        <a><%= link_to 'Sign out',  destroy_user_session_path, :methd => :delete %></a>
     <% else%>
-        <li><%= link_to 'Register',  edit_user_registration_path %></li>
-        <li><%= link_to 'Sign in',  new_user_session_path %></li>
+        <a><%= link_to 'Register',  edit_user_registration_path %></a>
+        <a><%= link_to 'Sign in',  new_user_session_path %></a>
     <% end%>
+    
+    </div>
+  </header>
