@@ -41,7 +41,7 @@ Rails.application.routes.draw do
  post '/search' => 'items#search'
  
  resources :categories
- get 'category/:title', to: 'static_pages#category'
+ get '/category/:title', to: 'static_pages#category'
  
 
 
