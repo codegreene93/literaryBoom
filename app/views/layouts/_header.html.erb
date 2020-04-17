@@ -1,4 +1,7 @@
   <header>
+    <section class="main">
+    <label for="toggle">&#9776;</label>
+    <input type="checkbox" id="toggle"/>
     <div class="NavBar">
       <a><%= link_to "Home", "/home" %></a>
       <a><%= link_to "About", "/about" %></a>
@@ -14,6 +17,8 @@
         <a><%= link_to 'Register',  edit_user_registration_path %></a>
         <a><%= link_to 'Sign in',  new_user_session_path %></a>
     <% end%>
-    
-    </div>
+   
+   </div>
+  </section>
+ 
   </header>
