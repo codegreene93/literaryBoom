@@ -68,7 +68,8 @@ label {
     align-items: none;
 
   }
-    .main a{
+
+  .main a{
     display: none;
     margin: 0 40px 0 40px;
   }
@@ -77,24 +78,14 @@ label {
 
   } a {
     display: block;
-
+    }
   }
 
-label{
-  color: #00D382;
-  margin: 0 40px 0 0;
-  font-size: 30px;
-  line-height: 70px;
-  display: none;
-}
 
-#toggle{
-  display: none;
-}
+
+
   
-  }
-
-
+  
 
 
 /*Index Page */

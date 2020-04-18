@@ -5,22 +5,22 @@
 <% @items.each do |item| %>
 
 <div class="itemhols">
-<h1><%= item.title %></h1>
-<%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
-<p><%= item.description %></p>
-<p>Price <%= number_to_currency(item.price, :unit => "€") %>
-<br>
-Author: <%= item.author %>
-<br>
-Genre: <%= item.genre %></p>
-<br>
-Category: <%#= item.category %>
-<p>
-    <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
-    <%= link_to 'Show', item, :class => "button", :role => "button" %>
-    <%= link_to 'Edit', edit_item_path(item), :class => "button", :role => "button" %>
-    <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
-</p>
+    <h1><%= item.title %></h1>
+        <%= link_to (image_tag item.image_url, :class => "itemholsIm"), item %>
+    <p><%= item.description %></p>
+    <p>Price <%= number_to_currency(item.price, :unit => "€") %>
+    <br>
+        Author: <%= item.author %>
+    <br>
+        Genre: <%= item.genre %></p>
+    <br>
+        Category: <%#= item.category %>
+    <p>
+        <a href="/cart/<%= item.id %>" class="button">Add To Cart</a>
+            <%= link_to 'Show', item, :class => "button", :role => "button" %>
+            <%= link_to 'Edit', edit_item_path(item), :class => "button", :role => "button" %>
+            <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+    </p>
 </div>
 <% end %>
 </div>
