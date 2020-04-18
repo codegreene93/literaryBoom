@@ -1,2 +1,60 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Literary BOOM!</title>
+  <link rel="Stylesheet" href="Stylesheet.css">
+  <script src="https://kit.fontawesome.com/ff52836ed1.js" crossorigin="anonymous"></script>
+  <% provide(:title, "About") %>
+</head>
+
+<body>
+
+
+    <div class ="over">
+    <div class ="index-left">
+
+    <h1>About</h1>
+
+    <div class = "about">
+    <h3>Our Goals</h3>
+    <p>Everryone has a Stort! A taile they secretly want to share with the world.
+    Yet most are left unknown, we at Literary Boom want to change that, our goal is
+    to enable any person to be an author and publish their own stories, both cheeply
+    and easily</p>
+
+    <h3>About Literary Boom</h3>
+    <p>The Literary Boom website was launched in 2019 and has been steadily growing since
+    then. We average about twenty new stories each month, in a variety of genres. For a
+    small fee anyone can register as an author on the website and publish their work
+    in ebook format, quickly and easily.</p>
+
+    <h3>Why Literary Boom?</h3>
+    <p>Why should you use this website? Unlike the major ebook retailers, Literary Boom
+    has minimal publishing fees. It also allows would be authors to sell their own ebooks
+    straight to the consumer. Without a middle man turnaround is quicker and its more
+    profitable.</p>
+     </div>
+      </div>
+
+    <div class= "index-right">
+        <p>Phone: 0872315423</p>
+        <%= image_tag("LOGO.png", alt: "Site Logo", :class => "index-rigght") %>
+        </div>
+</div>
+
+
+    <footer>
+  <i class="far fa-address-card"></i>
+  <p>Address: NCI, Mayor Street, International Financial Services Centre, Dublin </p>
+  <i class="fas fa-phone"></i>
+  <p> Phone Number: 0872315423 </p>
+  <i class="fas fa-envelope"></i>
+  <p>Email: Info@literaryboom.ie</p>
+  </footer>
+  </body>
+</html>
+
+
