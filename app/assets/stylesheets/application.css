@@ -68,8 +68,6 @@ label {
     align-items: none;
 
   }
-  
-  }
   .main a{
     display: none;
     margin: 0 40px 0 40px;
@@ -82,6 +80,8 @@ label {
 
   }
 
+  }
+  
 
 /*Index Page */
 .index-left, .index-right {
