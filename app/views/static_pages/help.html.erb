@@ -1,2 +1,66 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Literary BOOM!</title>
+  <link rel="Stylesheet" href="Stylesheet.css">
+  <script src="https://kit.fontawesome.com/ff52836ed1.js" crossorigin="anonymous"></script>
+  <% provide(:title, "Help") %>
+</head>
+
+<body>
+
+
+    <div class ="over">
+    <div class ="index-left">
+    <h1>Help</h1>
+
+    <div class = "help">
+    <h5>Contact Us</h5>
+    <p>The most convenient way to contact us is to send an email to help@support.literaryboom.com
+    All emails are read an replied to within 48 hours. Alternatively you can send a message
+    to Literary Boom at 0872315423.</p>
+
+    <h5>Website Security</h5>
+    <p>We have taken all possible steps to secure your credit card details by using high grade
+    Secure Socket Layer (SSL) for all transactions involving information passed between your computer
+    and our server. SSL encrypts the data so that no-one will be able to access the data in its
+    original format. </p>
+
+    <h5>Images</h5>
+    <p>Decorative and functional images may feature null ALT attributes. Other images on the site
+    include descriptive ALT attributes. </p>
+
+    <h5>Layout</h5>
+    <p>The Website is very easy to navigate, from the opening page, you can either go to the search,
+    page, the registration page or the login page. It is not necisary to be a site member to buy any
+    of the ebooks, but you must be a member to post books on the site. Both the login and registration
+    process lead too the Profile page which, alows users to post books onto the site. The search page
+    gives you a list of available books.</p>
+
+    <h5>Payment Options</h5>
+    <p>We accept payments made with the following credit cards: VISA, MasterCard, AMEX, VISA Debit,
+    VISA Delta, Maestro, Electron. We are also happy to accept PayPal.</p>
+
+         </div>
+      </div>
+
+    <div class= "index-right">
+        <%= image_tag("open-book-question-mark-27280720.jpg", alt: "Question Book", :class => "index-rigght") %>
+        </div>
+</div>
+
+    <footer>
+  <i class="far fa-address-card"></i>
+  <p>Address: NCI, Mayor Street, International Financial Services Centre, Dublin </p>
+  <i class="fas fa-phone"></i>
+  <p> Phone Number: 0872315423 </p>
+  <i class="fas fa-envelope"></i>
+  <p>Email: Info@literaryboom.ie</p>
+  </footer>
+  </body>
+</html>
+
+

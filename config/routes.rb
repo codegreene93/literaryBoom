@@ -32,11 +32,9 @@ Rails.application.routes.draw do
  get '/cart/decrease/:id', to: 'cart#decrease'
  get '/cart/increase/:id', to: 'cart#increase'
  
- get '/paid/:id' => 'static_pages#thankyou'
+ 
  get '/payments' => 'orders#pay'
  get '/shipped/:id' => 'orders#shipped'
- 
- get '/thankyou/:id' => 'static_pages#thankyou'
  
  post '/search' => 'items#search'
  
@@ -51,8 +49,10 @@ Rails.application.routes.draw do
   devise_for :users do 
    resources :orders 
   end
-
-
+  
+ get '/paid/:id' => 'static_pages#thankyou'
+ get '/thankyou/:id' => 'static_pages#thankyou'
+ 
   
   get 'admin/admin'
 
