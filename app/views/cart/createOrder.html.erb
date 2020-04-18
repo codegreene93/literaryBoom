@@ -51,7 +51,7 @@ You have just placed an order</h1>
 <button type="button"><%= link_to "View Orders", orders_path %></button>
 
 <!--<tr>
-<td><h2> <a href="/paid/<%= @order.id %>" class="button">Pay Now</a></h2></td>
+<td><h2> <a href="/paid/<%#= @order.id %>" class="button">Pay Now</a></h2></td>
 </tr>-->
 
 <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -63,5 +63,5 @@ You have just placed an order</h1>
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 
 <!--tells paypal where to send the buyer after the transaction is complete-->
-<input type="hidden" name="return" value="https://literaryboom.herokuapp.com/thankyou/orderId" >
+<input type="hidden" name="return" value="https://8ead88c263514d81b6b422d9684867de.vfs.cloud9.us-east-1.amazonaws.com" >
 </form>
