@@ -10,23 +10,8 @@
 </head>
 
 <body>
-  <header>
-    <div class="NavBar">
-      <a><%= link_to "Home", "/home" %></a>
-      <a><%= link_to "About", "/about" %></a>
-      <a><%= link_to "Help", "/help" %></a>
-      <a><%= link_to "Browse", "/items" %></a>
-      <a><%= link_to "Cart", "/cart" %></a>
-      <a><%= link_to "Login", new_user_registration_path %></a>
-      <a><%= link_to "Register", new_user_registration_path %></a>
-    <% if user_signed_in? %>
-        <a><%= link_to 'Edit Profile', edit_user_registration_path %></a>
-        <a><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></a>
-    <% end %>
-    </div>
-    </header>
 
-  <div class ="over">
+   <div class ="over">
     <div class ="index-left">
 
       <h1> Literary Boom </h1>
@@ -47,6 +32,8 @@
         <div>
           <%=render 'layouts/popular'%>
         </div>
+        <%=render 'layouts/categories'%>
+        <!--render categories here? causes infinite loop?-->
       </div>
 </div>
 
