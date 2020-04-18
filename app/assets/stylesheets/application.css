@@ -68,9 +68,7 @@ label {
     align-items: none;
 
   }
-  
-  }
-  .main a{
+    .main a{
     display: none;
     margin: 0 40px 0 40px;
   }
@@ -93,39 +91,10 @@ label{
 #toggle{
   display: none;
 }
-
-/*Hamburger for nav bar*/
-@media (max-width: 980px) {
-label {
-  display: block;
-  cursor: pointer;
-  width: 26px;
-  }
-  .NavBar{
-    text-align: center;
-  }
-  .NavBar a{
-    display: block;
-    margin: 0;
-    border-bottom: #cc5500;
-    position: top;
-    justify-content: none;
-    align-items: none;
-
-  }
   
   }
-  .main a{
-    display: none;
-    margin: 0 40px 0 40px;
-  }
-  #toggle:checked + .NavBar a {
-    display: block;
 
-  } a {
-    display: block;
 
-  }
 
 
 /*Index Page */
