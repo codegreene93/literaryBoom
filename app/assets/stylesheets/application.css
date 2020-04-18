@@ -66,11 +66,8 @@ label {
     position: top;
     justify-content: none;
     align-items: none;
-
   }
-  
-  }
-  .main a{
+    .main a{
     display: none;
     margin: 0 40px 0 40px;
   }
@@ -81,6 +78,9 @@ label {
     display: block;
 
   }
+  
+  }
+
 
 
 /*Index Page */
