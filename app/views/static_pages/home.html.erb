@@ -21,6 +21,10 @@
           <h4>Want to sell your books online without drastically reducing your profit margin? Join Literary BOOM! today.</h4>
     
           <a <%= link_to "Join Literaryboom", new_user_registration_path %></a>
+            <br>
+            <br>
+            <br>
+          <a <%= link_to "View Orders", orders_path %></a>
 
         </div>
         
@@ -33,9 +37,8 @@
           <%=render 'layouts/popular'%>
         </div>
         <%=render 'layouts/categories'%>
-        <!--render categories here? causes infinite loop?-->
+        </div>
       </div>
-</div>
 
 
 
