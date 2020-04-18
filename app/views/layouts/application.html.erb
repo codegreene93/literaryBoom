@@ -19,8 +19,27 @@
       <p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
       
       <br>
-      
+      <%if session[:cart_total].to_f >0 %>
+        <p>Cart total price is: <%= session[:cart_total] %> Cart amount is: <%= session[:cart_amount] %> </p>
+        
       <% end %>
+
+      <% end %>
+       <header>
+    <div class="NavBar">
+      <a><%= link_to "Home", "/home" %></a>
+      <a><%= link_to "About", "/about" %></a>
+      <a><%= link_to "Help", "/help" %></a>
+      <a><%= link_to "Browse", "/items" %></a>
+      <a><%= link_to "Cart", "/cart" %></a>
+      <a><%= link_to "Login", new_user_registration_path %></a>
+      <a><%= link_to "Register", new_user_registration_path %></a>
+    <% if user_signed_in? %>
+        <a><%= link_to 'Edit Profile', edit_user_registration_path %></a>
+        <a><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></a>
+    <% end %>
+    </div>
+    </header>
     <%= yield %>
     
   </body>
