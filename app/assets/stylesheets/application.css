@@ -232,14 +232,14 @@ label {
 .sparkler {
   background-image: url("Sparkler.jpg");
   background-repeat: no-repeat;
-  height: 650px;
+  height: 1000px;
   width: 100vw;
   background-size: cover;
   position: relative;
 }
  .box {
    width: 100px;
-    height: 250px;
+    height: 500px;
     padding: 60px;
     padding-bottom: 135px;
     padding-right: 100px;
@@ -253,6 +253,7 @@ label {
     background-color: grey;
     opacity: 0.9;
   }
+ 
   
   @media (max-width: 980px) {
     .sparkler {
@@ -265,7 +266,9 @@ label {
     padding-left: 10px;
     padding-right: 85px;
   }
- 
+ .box p {
+   display: none;
+ }
 }
   
 
@@ -273,7 +276,7 @@ label {
 .rain {
   background-image: url("Rain.jpg");
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 700px;
   width: 100vw;
   background-size: cover;
   position: relative;
@@ -281,7 +284,7 @@ label {
 
 .createuser {
   width: 100px;
-   height: 150px;
+   height: 320px;
    padding-bottom: 135px;
    padding-left: 40px;
    padding-right: 80px;
@@ -302,10 +305,13 @@ label {
   width: 900px;
   }
   .createuser {
-
- padding-bottom: 450px;
+ height: 220px;
+ padding-bottom: 380px;
  padding-left: 40px;
  padding-right: 80px;
+  }
+  .createuser p{
+    display: none;
   }
 }
 
