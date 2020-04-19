@@ -50,8 +50,8 @@ Rails.application.routes.draw do
    resources :orders 
   end
   
- get '/paid/:id' => 'static_pages#paid'
- get '/aboutSend/:id' => 'static_pages#aboutSend'
+ get '/paid/:id' => 'static_pages#thankyou'
+ get '/thankyou/:id' => 'static_pages#thankyou'
  
   
   get 'admin/admin'
