@@ -50,17 +50,17 @@ Rails.application.routes.draw do
    resources :orders 
   end
   
- get '/paid/:id' => 'static_pages#thankyou'
- get '/thankyou/:id' => 'static_pages#thankyou'
+ get '/paid/:id' => 'static_pages#paid'
+ get '/aboutSend/:id' => 'static_pages#aboutSend'
  
   
-  get 'admin/admin'
+ get 'admin/admin'
 
-  get '/createuser' => 'sign_in#createuser'
+ get '/createuser' => 'sign_in#createuser'
   
-  get '/signIn' => 'sign_in#signin'
+ get '/signIn' => 'sign_in#signin'
   
-  get '/adminsignin' => 'sign_in#adminsignin'
+ get '/adminsignin' => 'sign_in#adminsignin'
 
   #get 'sign_in/AdminSignIn'
   
